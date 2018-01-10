@@ -2,30 +2,24 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class game {
+	public static int [] intArray = {1, 0, 0, 0, 3, 3, 3, 0, 0, 0};
 	public static void main (String [] args) {
 		int [] intArray = {1, 0, 0, 0, 3, 3, 3, 0, 0, 0};
 	//veld van 10 plekken met een schip van lengte 3
 		System.out.println(Arrays.toString(intArray));
 		//print het veld met schip
-		if (intArray[5] == 0) {System.out.println("missed");}
-		 else {
-			System.out.println("hit");}
 		 
-	//	Scanner sc = new Scanner(System.in);
-	//	for (int j = 0; j < 10; j++) {
-	//		String i = sc.nextLine();
-	//		checkIfShipHit(i);
+	Scanner sc = new Scanner(System.in);
+	for (int j = 0; j < 10; j++) {
+	int i = sc.nextInt();
+		checkIfShipHit(i);}
+	
 	}
+	
+	public static void checkIfShipHit(int i2) {
+		if (intArray[i2] == 0) 
+			{System.out.println("missed");}
+		else 
+			{System.out.println("hit");}
 	}
-
-//	}
-
-//	public static void checkIfShipHit(String i) {
-//		if (intArray[0] == 0)
-//		//input x moet worden vergeleken met array nummer
-//			
-//		} else {
-//			System.out.println("nee, komt niet voor");
-
-//		}
-//	}
+}
